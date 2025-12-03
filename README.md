@@ -1,4 +1,4 @@
-# innoverse.you
+# PRYSM
 
 A modern, responsive landing page for a community platform built with React, TypeScript, Tailwind CSS, and Framer Motion.
 
