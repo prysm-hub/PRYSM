@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import {  Heart, Linkedin, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import logo from "../src/assets/prysm.png";
 
+
 export function Footer() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
