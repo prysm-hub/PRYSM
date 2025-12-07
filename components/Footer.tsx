@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Heart, Linkedin, Mail, MapPin, MessageCircle, Network, Phone } from "lucide-react";
+import {  Heart, Linkedin, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import logo from "../src/assets/prysm.png";
 
 export function Footer() {

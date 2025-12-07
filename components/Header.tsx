@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { Button } from "./ui/button";
+// import { Button } from "./ui/button";
 import logo from "../src/assets/prysm.png";
 import { useState } from "react";
 
