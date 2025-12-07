@@ -5,81 +5,96 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  /* PRYSM Color Palette */
+  --prysm-grad-1: #7C3AED;
+  --prysm-grad-2: #3B82F6;
+  --prysm-grad-3: #06B6D4;
+  --prysm-grad-4: #10B981;
+  --prysm-grad-5: #F59E0B;
+  --prysm-white: #FFFFFF;
+  --prysm-foreground: hwb(213 90% 3%);
+  --prysm-bg-900: #150d33;
+  --prysm-bg-800: #0c0830;
+  --prysm-muted: #9aa4b2;
+  --prysm-glow: rgba(124, 58, 237, 0.28);
+  
+  /* System Colors */
   --font-size: 14px;
-  --background: #fafafa;
-  --foreground: #1e1b2e;
-  --card: #ffffff;
-  --card-foreground: #1e1b2e;
-  --popover: #ffffff;
-  --popover-foreground: #1e1b2e;
-  --primary: #6366f1;
-  --primary-foreground: #ffffff;
-  --secondary: #f1f5f9;
-  --secondary-foreground: #1e293b;
-  --muted: #f8fafc;
-  --muted-foreground: #64748b;
-  --accent: #e0e7ff;
-  --accent-foreground: #3730a3;
+  --background: var(--prysm-bg-900);
+  --foreground: var(--prysm-foreground);
+  --card: #0f0a23;
+  --card-foreground: var(--prysm-white);
+  --popover: #0f0a23;
+  --popover-foreground: var(--prysm-white);
+  --primary: var(--prysm-grad-1);
+  --primary-foreground: var(--prysm-white);
+  --secondary: var(--prysm-grad-2);
+  --secondary-foreground: var(--prysm-white);
+  --muted: var(--prysm-muted);
+  --muted-foreground: #9aa4b2;
+  --accent: var(--prysm-grad-3);
+  --accent-foreground: var(--prysm-white);
   --destructive: #ef4444;
-  --destructive-foreground: #ffffff;
-  --border: #e2e8f0;
-  --input: transparent;
-  --input-background: #f8fafc;
-  --switch-background: #cbd5e1;
+  --destructive-foreground: var(--prysm-white);
+  --border: rgba(255, 255, 255, 0.08);
+  --input: #0c0830;
+  --input-background: rgba(255, 255, 255, 0.04);
+  --switch-background: #3B82F6;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: #6366f1;
-  --chart-1: #8b5cf6;
-  --chart-2: #06b6d4;
-  --chart-3: #10b981;
-  --chart-4: #f59e0b;
-  --chart-5: #ef4444;
+  --ring: var(--prysm-grad-1);
+  --chart-1: var(--prysm-grad-1);
+  --chart-2: var(--prysm-grad-2);
+  --chart-3: var(--prysm-grad-3);
+  --chart-4: var(--prysm-grad-4);
+  --chart-5: var(--prysm-grad-5);
   --radius: 0.75rem;
-  --sidebar: #ffffff;
-  --sidebar-foreground: #1e1b2e;
-  --sidebar-primary: #6366f1;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #f1f5f9;
-  --sidebar-accent-foreground: #1e293b;
-  --sidebar-border: #e2e8f0;
-  --sidebar-ring: #6366f1;
+  --sidebar: #0f0a23;
+  --sidebar-foreground: var(--prysm-white);
+  --sidebar-primary: var(--prysm-grad-1);
+  --sidebar-primary-foreground: var(--prysm-white);
+  --sidebar-accent: rgba(124, 58, 237, 0.2);
+  --sidebar-accent-foreground: var(--prysm-grad-2);
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-ring: var(--prysm-grad-1);
 }
 
+/* PRYSM is dark-first, so dark mode is built-in */
 .dark {
-  --background: #0f0f23;
-  --foreground: #e2e8f0;
-  --card: #1e1b2e;
-  --card-foreground: #e2e8f0;
-  --popover: #1e1b2e;
-  --popover-foreground: #e2e8f0;
-  --primary: #8b5cf6;
-  --primary-foreground: #ffffff;
-  --secondary: #1e293b;
-  --secondary-foreground: #e2e8f0;
-  --muted: #1e293b;
-  --muted-foreground: #94a3b8;
-  --accent: #1e293b;
-  --accent-foreground: #a78bfa;
+  --background: var(--prysm-bg-900);
+  --foreground: var(--prysm-foreground);
+  --card: #0f0a23;
+  --card-foreground: var(--prysm-white);
+  --popover: #0f0a23;
+  --popover-foreground: var(--prysm-white);
+  --primary: var(--prysm-grad-1);
+  --primary-foreground: var(--prysm-white);
+  --secondary: var(--prysm-grad-2);
+  --secondary-foreground: var(--prysm-white);
+  --muted: var(--prysm-muted);
+  --muted-foreground: #9aa4b2;
+  --accent: var(--prysm-grad-3);
+  --accent-foreground: var(--prysm-white);
   --destructive: #ef4444;
-  --destructive-foreground: #ffffff;
-  --border: #334155;
-  --input: #1e293b;
-  --ring: #8b5cf6;
+  --destructive-foreground: var(--prysm-white);
+  --border: rgba(255, 255, 255, 0.08);
+  --input: #0c0830;
+  --ring: var(--prysm-grad-1);
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --chart-1: #a78bfa;
-  --chart-2: #22d3ee;
-  --chart-3: #34d399;
-  --chart-4: #fbbf24;
-  --chart-5: #f87171;
-  --sidebar: #1e1b2e;
-  --sidebar-foreground: #e2e8f0;
-  --sidebar-primary: #8b5cf6;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #1e293b;
-  --sidebar-accent-foreground: #a78bfa;
-  --sidebar-border: #334155;
-  --sidebar-ring: #8b5cf6;
+  --chart-1: var(--prysm-grad-1);
+  --chart-2: var(--prysm-grad-2);
+  --chart-3: var(--prysm-grad-3);
+  --chart-4: var(--prysm-grad-4);
+  --chart-5: var(--prysm-grad-5);
+  --sidebar: #0f0a23;
+  --sidebar-foreground: var(--prysm-white);
+  --sidebar-primary: var(--prysm-grad-1);
+  --sidebar-primary-foreground: var(--prysm-white);
+  --sidebar-accent: rgba(124, 58, 237, 0.2);
+  --sidebar-accent-foreground: var(--prysm-grad-2);
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-ring: var(--prysm-grad-1);
 }
 
 @theme inline {
@@ -134,15 +149,13 @@
     padding: 0;
   }
   
-
-  
-  /* Custom gradient backgrounds */
-  .gradient-bg {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* PRYSM Gradient utilities */
+  .gradient-prysm {
+    background-image: linear-gradient(90deg, var(--prysm-grad-1), var(--prysm-grad-2), var(--prysm-grad-3), var(--prysm-grad-4), var(--prysm-grad-5));
   }
   
   .gradient-text {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(90deg, var(--prysm-grad-1) 0%, var(--prysm-grad-2) 50%, var(--prysm-grad-3) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -152,11 +165,20 @@
   }
   
   .hero-gradient {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    background: linear-gradient(135deg, #7C3AED 0%, #3B82F6 50%, #06B6D4 100%);
   }
   
   .card-gradient {
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.08) 0%, rgba(59, 130, 246, 0.08) 100%);
+  }
+  
+  /* Glow effects */
+  .glow-prysm {
+    box-shadow: 0 10px 30px var(--prysm-glow);
+  }
+  
+  .glow-prysm-sm {
+    box-shadow: 0 4px 12px var(--prysm-glow);
   }
 }
 

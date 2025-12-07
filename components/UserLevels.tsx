@@ -114,7 +114,7 @@ const userLevels = [
 
 export function UserLevels() {
   return (
-    <section id="levels" className="py-24 bg-gradient-to-br from-muted/30 to-accent/20">
+    <section id="levels" className="py-24" style={{ background: "#150d33" }}>
       <div className="container mx-auto px-4">
         <motion.div 
           className="mx-auto max-w-3xl text-center mb-16"
@@ -123,8 +123,8 @@ export function UserLevels() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <motion.h2 
-            className="mb-4 text-3xl sm:text-4xl lg:text-5xl gradient-text"
+          <motion.h2
+            className="mb-4 text-3xl sm:text-4xl lg:text-5xl text-white"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -135,6 +135,7 @@ export function UserLevels() {
           <motion.p 
             className="text-lg text-muted-foreground"
             initial={{ opacity: 0, y: 20 }}
+            style={{color:"white"}}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
             viewport={{ once: true }}
@@ -155,13 +156,14 @@ export function UserLevels() {
                 viewport={{ once: true }}
               >
                 <Card className="overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border-0">
-                  <CardHeader className={`bg-gradient-to-r ${level.bgGradient} relative overflow-hidden`}>
+                  <CardHeader className="relative overflow-hidden" style={{ background: "rgba(255,255,255,0.02)" }}>
                     {/* Subtle decorative elements */}
                     <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
-                    
+
                     <div className="flex items-center space-x-6 relative z-10">
-                      <motion.div 
-                        className={`bg-gradient-to-r ${level.gradient} p-4 rounded-2xl shadow-lg`}
+                      <motion.div
+                        className="p-4 rounded-2xl shadow-lg"
+                        style={{ background: `var(--prysm-grad-${(index % 5) + 1})` }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ type: "spring", stiffness: 300 }}
                       >
@@ -169,16 +171,16 @@ export function UserLevels() {
                       </motion.div>
                       <div className="flex-1">
                         <div className="flex items-center space-x-3 mb-2">
-                          <Badge variant="secondary" className="bg-white/80 text-foreground">
+                          <Badge variant="secondary" className="bg-white/10 text-white">
                             {level.level}
                           </Badge>
-                          <CardTitle className="text-2xl">{level.title}</CardTitle>
+                          <CardTitle className="text-2xl text-white">{level.title}</CardTitle>
                         </div>
-                        <CardDescription className="text-lg text-muted-foreground">
+                        <CardDescription className="text-lg" style={{ color: 'var(--prysm-muted)' }}>
                           {level.subtitle}
                         </CardDescription>
                       </div>
-                      <Star className="h-6 w-6 text-yellow-500" />
+                      <Star className="h-6 w-6" style={{ color: 'var(--prysm-grad-5)' }} />
                     </div>
                   </CardHeader>
                   
@@ -192,23 +194,24 @@ export function UserLevels() {
                         viewport={{ once: true }}
                       >
                         <div className="flex items-center space-x-3 mb-6">
-                          <div className="bg-gradient-to-r from-green-500 to-emerald-500 p-2 rounded-lg">
+                          <div className="p-2 rounded-lg" style={{ background: 'var(--prysm-grad-3)' }}>
                             <Target className="h-5 w-5 text-white" />
                           </div>
-                          <h4 className="text-xl">What They Receive</h4>
+                          <h4 className="text-xl text-white">What They Receive</h4>
                         </div>
                         <div className="space-y-3">
                           {level.benefits.receive.map((benefit, idx) => (
                             <motion.div
                               key={idx}
-                              className="flex items-start space-x-3 p-3 rounded-lg bg-green-50 border border-green-100"
+                              className="flex items-start space-x-3 p-3 rounded-lg"
+                              style={{ background: "rgba(255,255,255,0.01)", border: "1px solid rgba(255,255,255,0.04)" }}
                               initial={{ opacity: 0, x: -20 }}
                               whileInView={{ opacity: 1, x: 0 }}
                               transition={{ duration: 0.4, delay: idx * 0.1 }}
                               viewport={{ once: true }}
                             >
-                              <ArrowRight className="h-4 w-4 text-green-600 mt-1 flex-shrink-0" />
-                              <span className="text-sm">{benefit}</span>
+                              <ArrowRight className="h-4 w-4 mt-1 flex-shrink-0" style={{ color: 'var(--prysm-grad-3)' }} />
+                              <span className="text-sm" style={{ color: 'var(--prysm-foreground)' }}>{benefit}</span>
                             </motion.div>
                           ))}
                         </div>
@@ -222,23 +225,24 @@ export function UserLevels() {
                         viewport={{ once: true }}
                       >
                         <div className="flex items-center space-x-3 mb-6">
-                          <div className="bg-gradient-to-r from-blue-500 to-indigo-500 p-2 rounded-lg">
+                          <div className="p-2 rounded-lg" style={{ background: 'var(--prysm-grad-2)' }}>
                             <Handshake className="h-5 w-5 text-white" />
                           </div>
-                          <h4 className="text-xl">What They Give</h4>
+                          <h4 className="text-xl text-white">What They Give</h4>
                         </div>
                         <div className="space-y-3">
                           {level.benefits.give.map((contribution, idx) => (
                             <motion.div
                               key={idx}
-                              className="flex items-start space-x-3 p-3 rounded-lg bg-blue-50 border border-blue-100"
+                              className="flex items-start space-x-3 p-3 rounded-lg"
+                              style={{ background: "rgba(255,255,255,0.01)", border: "1px solid rgba(255,255,255,0.04)" }}
                               initial={{ opacity: 0, x: 20 }}
                               whileInView={{ opacity: 1, x: 0 }}
                               transition={{ duration: 0.4, delay: idx * 0.1 }}
                               viewport={{ once: true }}
                             >
-                              <ArrowRight className="h-4 w-4 text-blue-600 mt-1 flex-shrink-0" />
-                              <span className="text-sm">{contribution}</span>
+                              <ArrowRight className="h-4 w-4 mt-1 flex-shrink-0" style={{ color: 'var(--prysm-grad-2)' }} />
+                              <span className="text-sm" style={{ color: 'var(--prysm-foreground)' }}>{contribution}</span>
                             </motion.div>
                           ))}
                         </div>
@@ -252,57 +256,72 @@ export function UserLevels() {
         </div>
 
         {/* Enhanced Call to Action - Fixed rotating icon issue */}
-        <motion.div 
-          className="mt-20 text-center"
+        <motion.div
+          className="mt-20"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 p-1 max-w-3xl mx-auto">
-            <div className="relative bg-background rounded-3xl p-12">
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-indigo-600/10 via-purple-600/10 to-pink-600/10 rounded-3xl"
-              />
-              <div className="relative z-10">
-                <motion.div
-                  className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full mb-6"
-                  animate={{ scale: [1, 1.05, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
-                  <Network className="h-8 w-8 text-white" />
-                </motion.div>
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              {/* Left: Text + CTAs */}
+              <div>
                 <h3 className="text-3xl mb-4 text-white">Ready to Join?</h3>
-                <p className="text-white/80 mb-8 max-w-xl mx-auto">
-                  Be among the first to join our community. Help us build something amazing together 
+                <p className="text-white/80 mb-6">
+                  Be among the first to join our community. Help us build something amazing together
                   as we create the future of mentorship and professional growth.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <motion.a
                     href="https://chat.whatsapp.com/DE0qy17AB6t1Qdalf1D2iL"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group relative bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden inline-block"
-                    whileHover={{ scale: 1.02, y: -3 }}
+                    className="inline-flex items-center justify-center px-10 py-3 rounded-2xl font-semibold text-lg"
+                    style={{ background: 'var(--prysm-grad-1)', color: '#fff', boxShadow: '0 12px 30px rgba(124,58,237,0.16), 0 4px 10px rgba(0,0,0,0.18)' }}
+                    whileHover={{ scale: 1.04 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 via-purple-700 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="relative z-10 flex items-center justify-center gap-2">
-                      <span>Join Community</span>
-                      <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-                    </div>
+                    <span>Join Community</span>
+                    <ArrowRight className="h-5 w-5 ml-3" />
                   </motion.a>
-                  {/* <motion.button 
-                    className="group relative bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/20 hover:border-white/40 transition-all duration-300 overflow-hidden"
-                    whileHover={{ scale: 1.02, y: -3 }}
+
+                  <motion.a
+                    href="#contact"
+                    className="inline-flex items-center justify-center px-8 py-3 rounded-2xl font-medium text-lg"
+                    style={{ border: '1px solid rgba(255,255,255,0.12)', color: 'var(--prysm-foreground)', background: 'transparent' }}
+                    whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="relative z-10 flex items-center justify-center gap-2">
-                      <span>Learn More</span>
-                      <div className="w-2 h-2 bg-white rounded-full group-hover:scale-150 transition-transform duration-300" />
+                    Learn More
+                  </motion.a>
+                </div>
+              </div>
+
+              {/* Right: Visual */}
+              <div className="flex justify-center md:justify-end">
+                <div className="relative">
+                  <div
+                    className="rounded-3xl p-8"
+                    style={{
+                      background: 'rgba(255,255,255,0.02)',
+                      border: '1px solid rgba(255,255,255,0.04)',
+                      boxShadow: '0 18px 50px rgba(124,58,237,0.12), 0 6px 18px rgba(0,0,0,0.22)'
+                    }}
+                  >
+                    <div className="flex items-center justify-center">
+                      <div className="rounded-full w-28 h-28 flex items-center justify-center shadow-lg" style={{ background: 'var(--prysm-grad-1)' }}>
+                        <Network className="h-10 w-10 text-white" />
+                      </div>
                     </div>
-                  </motion.button> */}
+                    <div className="mt-4 text-center">
+                      <p className="text-white font-medium">Join a network of mentors & builders</p>
+                      <p className="text-white/70 text-sm mt-2">Fast-track learning, find collaborators, and get real opportunities.</p>
+                    </div>
+                  </div>
+                  <div className="absolute -bottom-5 left-4 p-2 rounded-lg" style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.04)' }}>
+                    <span className="text-xs" style={{ color: 'var(--prysm-grad-2)' }}>Free to join • Open roles</span>
+                  </div>
                 </div>
               </div>
             </div>

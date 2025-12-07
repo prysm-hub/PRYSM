@@ -40,11 +40,26 @@ export default {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
+        prysm: {
+          50: "#f6f7ff",
+          100: "#e9ecff",
+          500: "#7C3AED",
+          "bg-900": "#07031a",
+          "bg-800": "#0c0830",
+          muted: "#9aa4b2",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        "prysm-glow": "0 10px 30px var(--prysm-glow)",
+        "prysm-glow-sm": "0 4px 12px var(--prysm-glow)",
+      },
+      backgroundImage: {
+        "gradient-prysm": "linear-gradient(90deg, var(--prysm-grad-1), var(--prysm-grad-2), var(--prysm-grad-3), var(--prysm-grad-4), var(--prysm-grad-5))",
       },
     },
   },
