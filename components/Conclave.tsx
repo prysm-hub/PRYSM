@@ -317,12 +317,24 @@ export function Conclave() {
           transition={{ duration: 0.5 }}
         // className="max-w-6xl mx-auto"
         >
-          <Card className="border-0" style={{
-            background: "rgba(255,255,255,0.02)", boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)" // equal shadow all around
-          }}>
-
-            <CardContent className="px-6 pb-6">
-              <div className="grid grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 gap-6 auto-rows-fr">
+          <Card
+            className="border-0"
+            style={{
+              background: "rgba(255,255,255,0.02)",
+              boxShadow: "0 0 20px rgba(0,0,0,0.5)",
+            }}
+          >
+            <CardContent className="px-4 sm:px-6 pb-6">
+              <div
+                className="
+        grid
+        grid-cols-1
+        sm:grid-cols-2
+        lg:grid-cols-3
+        gap-6
+        auto-rows-fr
+      "
+              >
                 {conclaveData.hour1.sessions.map((session, index) => (
                   <EnhancedSessionCard
                     key={index}
@@ -334,6 +346,7 @@ export function Conclave() {
               </div>
             </CardContent>
           </Card>
+
         </motion.div>
 
         {/* Key Benefits - More Compact */}
