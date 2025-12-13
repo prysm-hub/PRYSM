@@ -16,10 +16,9 @@ const scrollToSection = (sectionId: string) => {
 };
 
 const navItems = [
-  { label: "About", id: "hero" },
-  { label: "Community", id: "community" },
-  { label: "Conclave", id: "conclave" },
   { label: "Ecosystem", id: "ecosystem" },
+  { label: "Conclave", id: "conclave" },
+  { label: "About", id: "about" },
   { label: "Contact", id: "contact" },
 ];
 
@@ -47,17 +46,17 @@ export function Header() {
           transition={{ type: "spring", stiffness: 300 }}
         >
           <div className="relative bg-prysm-grad-1 rounded-lg flex items-center justify-center shadow-lg">
-              <img
-                src={logo}
-                alt="PRYSM Logo"
-                className="h-20 w-20 object-contain"  // <-- larger logo
-              />
+            <img
+              src={logo}
+              alt="PRYSM Logo"
+              className="h-20 w-20 object-contain"  // <-- larger logo
+            />
           </div>
 
           <div className="leading-tight">
             <h1 className="text-2xl font-extrabold text-white tracking-tight">PRYSM</h1>
             <p className="text-xs text-gray-400 font-medium">
-             Clarity. Direction. Growth.
+              Clarity. Direction. Growth.
             </p>
           </div>
         </motion.div>

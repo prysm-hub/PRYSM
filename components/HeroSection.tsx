@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 
 const scrollToCommunity = () => {
-  const element = document.getElementById('community');
+  const element = document.getElementById('about');
   if (element) {
     element.scrollIntoView({
       behavior: 'smooth',

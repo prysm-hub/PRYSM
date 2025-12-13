@@ -91,9 +91,9 @@ export function Footer() {
             <h4 className="text-white font-semibold">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               {[
-                { name: "About", id: "hero" },
-                { name: "Community", id: "community" },
                 { name: "Ecosystem", id: "ecosystem" },
+                { name: "Conclave", id: "conclave" },
+                { name: "About", id: "about" },
                 { name: "Contact", id: "contact" }
               ].map((link, index) => (
                 <motion.li key={index} whileHover={{ x: 5 }}>

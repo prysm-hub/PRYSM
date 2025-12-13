@@ -5,25 +5,25 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/
 const features = [
   {
     icon: Users,
-    title: "Multi-Level Community",
+    title: "Collaborative Engagement",
     description: "PRYSM unites individuals across stages of their professional journey within a structured framework that enables clear engagement, contribution, and progression.",
     gradient: "from-prysm-grad-1"
   },
   {
     icon: Target,
-    title: "Reciprocal Learning",
+    title: "Reciprocal Exchange",
     description: "Knowledge flows multidirectionally, with every member contributing and learning within a balanced system where insights are shared, refined, and applied.",
     gradient: "from-prysm-grad-2"
   },
   {
     icon: Lightbulb,
-    title: "Innovation Focus",
+    title: "Experience-Led Thinking",
     description: "PRYSM is driven by real-world execution, bringing diverse perspectives together to challenge assumptions, strengthen decisions, and deliver meaningful outcomes.",
     gradient: "from-prysm-grad-3"
   },
   {
     icon: TrendingUp,
-    title: "Career Acceleration",
+    title: "Outcome-Oriented Progress",
     description: "Engagement within PRYSM drives action, where conversations spark decisions, decisions create momentum, and momentum delivers measurable progress.",
     gradient: "from-prysm-grad-5"
   }
@@ -32,7 +32,7 @@ const features = [
 export function CommunityOverview() {
   return (
     <section
-      id="community"
+      id="about"
       className="py-24"
       style={{
         background: "#150d33"
