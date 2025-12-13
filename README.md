@@ -57,7 +57,7 @@ Before running this project, make sure you have the following installed:
 │   ├── Header.tsx      # Navigation header
 │   ├── HeroSection.tsx # Hero section component
 │   ├── CommunityOverview.tsx # Community overview
-│   ├── UserLevels.tsx  # User levels component
+│   ├── UserLevels.tsx  # User ecosystem component
 │   └── Footer.tsx      # Footer component
 ├── styles/             # CSS styles
 │   └── globals.css     # Global styles and CSS variables

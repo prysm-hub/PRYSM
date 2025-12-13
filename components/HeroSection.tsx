@@ -54,10 +54,10 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
           >
-            Where{" "}
-            <span className="inline-block" style={{ color: "var(--prysm-grad-1)" }}>Growth</span>{" "}
-            Meets{" "}
-            <span className="inline-block" style={{ color: "var(--prysm-grad-2)" }}>Guidance</span>
+            Where &nbsp;
+            <span className="inline-block" style={{ color: "var(--prysm-grad-1)" }}> Growth</span>{" "}
+            Is  Enabled  Through &nbsp;
+            <span className="inline-block" style={{ color: "var(--prysm-grad-2)" }}> Guidance</span>
           </motion.h1>
 
           <motion.p
@@ -67,8 +67,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.6 }}
           >
-            Building bridges between education, industry, and entrepreneurship through meaningful connections.
-          </motion.p>
+            Building structured bridges between where people stand today and where they aspire to be.          </motion.p>
 
           <motion.div
             className="flex flex-col sm:flex-row justify-center gap-4"
@@ -90,7 +89,7 @@ export function HeroSection() {
               <ArrowRight className="ml-2 h-5 w-5 inline" />
             </motion.button>
 
-            <motion.button
+            {/* <motion.button
               onClick={scrollToCommunity}
               className="px-8 py-3 rounded-full font-semibold text-white border transition-all"
               style={{ borderColor: "rgba(255, 255, 255, 0.12)", background: 'transparent' }}
@@ -98,7 +97,7 @@ export function HeroSection() {
               whileTap={{ scale: 0.95 }}
             >
               Learn More
-            </motion.button>
+            </motion.button> */}
           </motion.div>
         </div>
       </div>

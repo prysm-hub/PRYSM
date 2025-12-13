@@ -35,7 +35,7 @@ const userLevels = [
     }
   },
   {
-    level: "Level 2", 
+    level: "Level 2",
     title: "Early Professionals",
     subtitle: "Career Acceleration & Visibility",
     icon: Briefcase,
@@ -55,7 +55,7 @@ const userLevels = [
   },
   {
     level: "Level 3",
-    title: "Early-Stage Startup Founders", 
+    title: "Early-Stage Startup Founders",
     subtitle: "Building & Scaling",
     icon: Rocket,
     gradient: "from-violet-500 to-purple-500",
@@ -74,8 +74,8 @@ const userLevels = [
   },
   {
     level: "Level 4",
-    title: "Business Professionals",
-    subtitle: "Growth, Impact & Network Expansion", 
+    title: "Business Leaders",
+    subtitle: "Growth, Impact & Network Expansion",
     icon: Building,
     gradient: "from-orange-500 to-red-500",
     bgGradient: "from-orange-50 to-red-50",
@@ -114,9 +114,9 @@ const userLevels = [
 
 export function UserLevels() {
   return (
-    <section id="levels" className="py-24" style={{ background: "#150d33" }}>
+    <section id="ecosystem" className="py-24" style={{ background: "#150d33" }}>
       <div className="container mx-auto px-4">
-        <motion.div 
+        <motion.div
           className="mx-auto max-w-3xl text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -130,12 +130,11 @@ export function UserLevels() {
             transition={{ duration: 0.7, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Community Levels
-          </motion.h2>
-          <motion.p 
+            The PRYSM Ecosystem          </motion.h2>
+          <motion.p
             className="text-lg text-muted-foreground"
             initial={{ opacity: 0, y: 20 }}
-            style={{color:"white"}}
+            style={{ color: "white" }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
             viewport={{ once: true }}
@@ -183,7 +182,7 @@ export function UserLevels() {
                       <Star className="h-6 w-6" style={{ color: 'var(--prysm-grad-5)' }} />
                     </div>
                   </CardHeader>
-                  
+
                   <CardContent className="pt-8 pb-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                       {/* What They Receive */}
@@ -263,8 +262,8 @@ export function UserLevels() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="max-w-5xl mx-auto items-center">
+            <div className="grid gap-8 items-center">
               {/* Left: Text + CTAs */}
               <div>
                 <h3 className="text-3xl mb-4 text-white">Ready to Join?</h3>
@@ -274,7 +273,7 @@ export function UserLevels() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <motion.a
-                    href="https://chat.whatsapp.com/DE0qy17AB6t1Qdalf1D2iL"
+                    href="https://www.linkedin.com/company/prismhub"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-10 py-3 rounded-2xl font-semibold text-lg"
@@ -282,11 +281,11 @@ export function UserLevels() {
                     whileHover={{ scale: 1.04 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    <span>Join Community</span>
+                    <span>Connect With Us</span>
                     <ArrowRight className="h-5 w-5 ml-3" />
                   </motion.a>
 
-                  <motion.a
+                  {/* <motion.a
                     href="#contact"
                     className="inline-flex items-center justify-center px-8 py-3 rounded-2xl font-medium text-lg"
                     style={{ border: '1px solid rgba(255,255,255,0.12)', color: 'var(--prysm-foreground)', background: 'transparent' }}
@@ -294,12 +293,12 @@ export function UserLevels() {
                     whileTap={{ scale: 0.98 }}
                   >
                     Learn More
-                  </motion.a>
+                  </motion.a> */}
                 </div>
               </div>
 
               {/* Right: Visual */}
-              <div className="flex justify-center md:justify-end">
+              {/* <div className="flex justify-center md:justify-end">
                 <div className="relative">
                   <div
                     className="rounded-3xl p-8"
@@ -323,7 +322,7 @@ export function UserLevels() {
                     <span className="text-xs" style={{ color: 'var(--prysm-grad-2)' }}>Free to join • Open roles</span>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </motion.div>

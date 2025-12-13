@@ -19,7 +19,7 @@ const navItems = [
   { label: "About", id: "hero" },
   { label: "Community", id: "community" },
   { label: "Conclave", id: "conclave" },
-  { label: "User Levels", id: "levels" },
+  { label: "Ecosystem", id: "ecosystem" },
   { label: "Contact", id: "contact" },
 ];
 
@@ -57,7 +57,7 @@ export function Header() {
           <div className="leading-tight">
             <h1 className="text-2xl font-extrabold text-white tracking-tight">PRYSM</h1>
             <p className="text-xs text-gray-400 font-medium">
-              Direction. Acceleration. Growth.
+             Clarity. Direction. Growth.
             </p>
           </div>
         </motion.div>

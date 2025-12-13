@@ -6,25 +6,25 @@ const features = [
   {
     icon: Users,
     title: "Multi-Level Community",
-    description: "From students to investors, everyone finds their place and purpose in our structured ecosystem.",
+    description: "PRYSM unites individuals across stages of their professional journey within a structured framework that enables clear engagement, contribution, and progression.",
     gradient: "from-prysm-grad-1"
   },
   {
     icon: Target,
     title: "Reciprocal Learning",
-    description: "Every member both teaches and learns, creating a sustainable cycle of growth and knowledge sharing.",
+    description: "Knowledge flows multidirectionally, with every member contributing and learning within a balanced system where insights are shared, refined, and applied.",
     gradient: "from-prysm-grad-2"
   },
   {
     icon: Lightbulb,
     title: "Innovation Focus",
-    description: "Fresh perspectives meet experienced guidance to drive innovation and breakthrough solutions.",
+    description: "PRYSM is driven by real-world execution, bringing diverse perspectives together to challenge assumptions, strengthen decisions, and deliver meaningful outcomes.",
     gradient: "from-prysm-grad-3"
   },
   {
     icon: TrendingUp,
     title: "Career Acceleration",
-    description: "Fast-track your professional journey through mentorship, networking, and real opportunities.",
+    description: "Engagement within PRYSM drives action, where conversations spark decisions, decisions create momentum, and momentum delivers measurable progress.",
     gradient: "from-prysm-grad-5"
   }
 ];
@@ -39,7 +39,7 @@ export function CommunityOverview() {
       }}
     >
       <div className="container mx-auto px-4">
-        <motion.div 
+        <motion.div
           className="mx-auto max-w-3xl text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -49,14 +49,14 @@ export function CommunityOverview() {
           <motion.h2
             className="mb-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold"
             initial={{ opacity: 0, scale: 0.8 }}
-            style={{color:"white"}}
+            style={{ color: "white" }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Together, We Create Impact 
+            Together, We Create Impact
           </motion.h2>
-          <motion.p 
+          <motion.p
             className="text-lg"
             style={{ color: "var(--prysm-foreground)" }}
             initial={{ opacity: 0, y: 20 }}
@@ -64,8 +64,7 @@ export function CommunityOverview() {
             transition={{ duration: 0.7, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            Building a community where knowledge flows seamlessly and opportunities abound
-          </motion.p>
+            Enabling an ecosystem where insights flow and opportunities expand.</motion.p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
@@ -87,7 +86,7 @@ export function CommunityOverview() {
                   }}
                 >
                   <CardHeader className="pb-4">
-                    <div 
+                    <div
                       className="mx-auto w-16 h-16 rounded-xl flex items-center justify-center mb-4"
                       style={{
                         background: `var(--prysm-grad-${index % 5 + 1})`
@@ -133,10 +132,7 @@ export function CommunityOverview() {
               </CardHeader>
               <CardContent>
                 <p className="leading-relaxed" style={{ color: "var(--prysm-foreground)" }}>
-                  To create a global ecosystem where knowledge flows seamlessly across all professional levels, 
-                  fostering innovation, accelerating careers, and building lasting mentorship relationships 
-                  that transform individuals and communities.
-                </p>
+                  To create a structured global ecosystem where knowledge, expertise, and opportunities flow seamlessly—empowering individuals to make informed decisions, strengthen capabilities, and achieve meaningful professional growth.                </p>
               </CardContent>
             </Card>
           </motion.div>
@@ -164,10 +160,7 @@ export function CommunityOverview() {
               </CardHeader>
               <CardContent>
                 <p className="leading-relaxed" style={{ color: "var(--prysm-foreground)" }}>
-                  We connect students, professionals, founders, and investors through structured mentorship programs 
-                  and reciprocal learning experiences. Every member both contributes expertise and gains new perspectives, 
-                  creating a thriving community of mutual growth and success.
-                </p>
+                  To enable every participant to contribute, learn, and thrive within a system built on clarity, standards, and purposeful engagement—turning collaboration into actionable insight and lasting impact. </p>
               </CardContent>
             </Card>
           </motion.div>
