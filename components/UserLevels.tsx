@@ -5,7 +5,6 @@ import {
   Building,
   GraduationCap,
   Handshake,
-  Network,
   Rocket,
   Star,
   Target,
